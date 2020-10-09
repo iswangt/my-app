@@ -4,10 +4,10 @@
   <el-container class="inner-container">
     <Header />
     <el-main class="main">
-      <h1>main</h1>
+      <h1>{{$t('message.main')}}</h1>
       <router-view />
     </el-main>
-    <el-footer class="footer">Footer</el-footer>
+    <el-footer class="footer">{{$t('message.footer')}}</el-footer>
   </el-container>
 </el-container>
 </template>
@@ -39,6 +39,7 @@ export default {
     }
 
     .main {
+      text-align: center;
       background: gray;
 
       h1 {
@@ -48,6 +49,7 @@ export default {
     }
 
     .footer {
+      text-align: center;
       background: #ffffff;
     }
   }
