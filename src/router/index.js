@@ -26,6 +26,11 @@ export default new Router({
           path: '/index/form',
           name: 'table',
           component: resolve => require(['@/views/form/form'], resolve)
+        },
+        {
+          path: '/index/ECharts',
+          name: 'table',
+          component: resolve => require(['@/views/eCharts/eCharts'], resolve)
         }
       ]
     }
