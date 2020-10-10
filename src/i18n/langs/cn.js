@@ -1,3 +1,5 @@
+import zhLocale from 'element-ui/lib/locale/lang/zh-CN' // element ui 中文
+
 const cn = {
   message: {
     'main': '你好,世界',
@@ -6,12 +8,12 @@ const cn = {
     'add': '新增',
     'del': '删除',
     menu: {
-      table: '表格',
-      form: '表单',
+      calendar: '日历',
       echart: '图表',
       fullScreen: '屏幕'
     }
-  }
+  },
+  ...zhLocale // element ui 中文
 }
 
 export default cn

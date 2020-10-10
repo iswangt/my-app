@@ -1,3 +1,5 @@
+import enLocale from 'element-ui/lib/locale/lang/en' // element ui 英文
+
 const en = {
   message: {
     'main': 'hello,world',
@@ -6,12 +8,12 @@ const en = {
     'add': 'add',
     'del': 'delete',
     menu: {
-      table: 'table',
-      form: 'form',
+      calendar: 'calendar',
       echart: 'echart',
       fullScreen: 'screen'
     }
-  }
+  },
+  ...enLocale // element ui 英文
 }
 
 export default en

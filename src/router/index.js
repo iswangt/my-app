@@ -14,7 +14,7 @@ export default new Router({
     {
       path: '/index',
       name: 'index',
-      redirect: '/index/table',
+      redirect: '/index/calendar',
       component: resolve => require(['@/views/common/index'], resolve),
       meta: {
         KEY: 'aside',
@@ -23,30 +23,19 @@ export default new Router({
       },
       children: [
         {
-          path: '/index/table',
-          name: 'table',
-          component: resolve => require(['@/views/table/table'], resolve),
+          path: '/index/calendar',
+          name: 'calendar',
+          component: resolve => require(['@/views/calendar/calendar'], resolve),
           meta: {
             child: false,
             hidden: false,
             icon: 'el-icon-s-grid',
-            localekey: 'table'
-          },
-        },
-        {
-          path: '/index/form',
-          name: 'table',
-          component: resolve => require(['@/views/form/form'], resolve),
-          meta: {
-            child: false,
-            hidden: false,
-            icon: 'el-icon-edit',
-            localekey: 'form'
+            localekey: 'calendar'
           },
         },
         {
           path: '/index/ECharts',
-          name: 'table',
+          name: 'ECharts',
           component: resolve => require(['@/views/eCharts/eCharts'], resolve),
           meta: {
             child: false,
