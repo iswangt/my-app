@@ -16,21 +16,44 @@ export default new Router({
       name: 'index',
       redirect: '/index/table',
       component: resolve => require(['@/views/common/index'], resolve),
+      meta: {
+        KEY: 'aside',
+        child: true,
+        hidden: false
+      },
       children: [
         {
           path: '/index/table',
           name: 'table',
-          component: resolve => require(['@/views/table/table'], resolve)
+          component: resolve => require(['@/views/table/table'], resolve),
+          meta: {
+            child: false,
+            hidden: false,
+            icon: 'el-icon-s-grid',
+            localekey: 'table'
+          },
         },
         {
           path: '/index/form',
           name: 'table',
-          component: resolve => require(['@/views/form/form'], resolve)
+          component: resolve => require(['@/views/form/form'], resolve),
+          meta: {
+            child: false,
+            hidden: false,
+            icon: 'el-icon-edit',
+            localekey: 'form'
+          },
         },
         {
           path: '/index/ECharts',
           name: 'table',
-          component: resolve => require(['@/views/eCharts/eCharts'], resolve)
+          component: resolve => require(['@/views/eCharts/eCharts'], resolve),
+          meta: {
+            child: false,
+            hidden: false,
+            icon: 'el-icon-office-building',
+            localekey: 'echart'
+          },
         }
       ]
     }

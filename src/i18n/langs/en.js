@@ -5,6 +5,11 @@ const en = {
     'look': 'show',
     'add': 'add',
     'del': 'delete',
+    menu: {
+      table: 'table',
+      form: 'form',
+      echart: 'echart'
+    }
   }
 }
 

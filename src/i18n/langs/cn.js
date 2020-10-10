@@ -4,7 +4,12 @@ const cn = {
     'footer': '尾部',
     'look': '查看',
     'add': '新增',
-    'del': '删除'
+    'del': '删除',
+    menu: {
+      table: '表格',
+      form: '表单',
+      echart: '图表'
+    }
   }
 }
 
