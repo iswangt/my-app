@@ -65,7 +65,7 @@ export default new Router({
             icon: 'el-icon-full-screen',
             localekey: 'fullScreen',
           }
-        },
+        }
       ]
     }
   ]
