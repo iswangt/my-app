@@ -39,7 +39,6 @@ export default {
     }
 
     .main {
-      text-align: center;
       background: gray;
 
       h1 {
@@ -49,7 +48,6 @@ export default {
     }
 
     .footer {
-      text-align: center;
       background: #ffffff;
     }
   }

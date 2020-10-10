@@ -1,0 +1,17 @@
+// 混合
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -ms-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+// @include border-radius(10px) 
+
+@mixin border($num,$h,$col){
+  border-width: $num;
+  border-style: $h;
+  border-color: $col;
+}
+
+// @include border(1px,solid,red)

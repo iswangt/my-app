@@ -54,7 +54,18 @@ export default new Router({
             icon: 'el-icon-office-building',
             localekey: 'echart'
           },
-        }
+        },
+        {
+          path: '/index/fullScreen', // 测试用例scss
+          name: 'fullScreen',
+          component: resolve => require(['@/views/fullScreen/fullScreen'], resolve),
+          meta: {
+            child: false,
+            hidden: false,
+            icon: 'el-icon-full-screen',
+            localekey: 'fullScreen',
+          }
+        },
       ]
     }
   ]

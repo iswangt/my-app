@@ -8,7 +8,8 @@ const cn = {
     menu: {
       table: '表格',
       form: '表单',
-      echart: '图表'
+      echart: '图表',
+      fullScreen: '屏幕'
     }
   }
 }

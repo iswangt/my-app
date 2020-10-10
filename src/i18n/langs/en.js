@@ -8,7 +8,8 @@ const en = {
     menu: {
       table: 'table',
       form: 'form',
-      echart: 'echart'
+      echart: 'echart',
+      fullScreen: 'screen'
     }
   }
 }
