@@ -11,6 +11,8 @@ const i18n = new VueI18n({
   messages
 })
 
+//this.$i18n.locale = this.value 语言切换时，element语言随之切换
+
 locale.i18n((key, value) => i18n.t(key, value)) // element ui 内部国际化
 
 export default i18n

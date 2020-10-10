@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     langs() {
-      this.$i18n.locale = this.value
+      this.$i18n.locale = this.value // 切换语言
     }
   }
 }
