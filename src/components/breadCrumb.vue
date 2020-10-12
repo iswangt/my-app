@@ -1,7 +1,7 @@
 <template>
 <div>
   <el-breadcrumb separator="/" class="bread">
-    <el-breadcrumb-item v-for="(item,index) in breadcrumb.data" :key="index" :to="{ path: item.path }">{{$t(item.label)}}</el-breadcrumb-item>
+    <el-breadcrumb-item v-for="(item,index) in breadcrumb" :key="index" :to="{ path: item.path }">{{item.label}}</el-breadcrumb-item>
   </el-breadcrumb>
 </div>
 </template>

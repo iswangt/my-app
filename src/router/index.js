@@ -54,6 +54,17 @@ export default new Router({
             icon: 'el-icon-full-screen',
             localekey: 'fullScreen',
           }
+        },
+        {
+          path: '/index/option', // 测试用例 组件保持当前状态 国际化时 测试用例
+          name: 'option',
+          component: resolve => require(['@/views/option/option'], resolve),
+          meta: {
+            child: false,
+            hidden: false,
+            icon: 'el-icon-edit',
+            localekey: 'option',
+          }
         }
       ]
     }

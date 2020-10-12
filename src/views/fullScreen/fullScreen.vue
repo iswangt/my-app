@@ -11,16 +11,7 @@ import breadcrumb from '@/components/breadCrumb'
 export default {
   data() {
     return {
-      breadcrumb: {
-        data: [{
-            label: `message.login`,
-            path: '/'
-          },
-          {
-            label: `message.menu.${this.$route.meta.localekey}`
-          }
-        ]
-      },
+
     }
   },
   methods: {
@@ -62,6 +53,18 @@ export default {
           d.webkitCancelFullScreen();
         }
       }
+    }
+  },
+  computed: {
+    breadcrumb() {
+      return [{
+          label: this.$t(`message.login`),
+          path: '/'
+        },
+        {
+          label: this.$t(`message.menu.${this.$route.meta.localekey}`)
+        }
+      ]
     }
   },
   components: {

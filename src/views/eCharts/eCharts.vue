@@ -15,16 +15,6 @@ import breadCrumb from '@/components/breadCrumb'
 export default {
   data() {
     return {
-      breadcrumb: {
-        data: [{
-            label: `message.login`,
-            path: '/'
-          },
-          {
-            label: `message.menu.${this.$route.meta.localekey}`
-          }
-        ]
-      },
       option: {
         title: {
           text: 'ECharts'
@@ -91,6 +81,18 @@ export default {
     initeCharts() {
       let myChart = this.$echarts.init(document.getElementById('main'))
       myChart.setOption(this.option)
+    }
+  },
+  computed: {
+    breadcrumb() {
+      return [{
+          label: this.$t(`message.login`),
+          path: '/'
+        },
+        {
+          label: this.$t(`message.menu.${this.$route.meta.localekey}`)
+        }
+      ]
     }
   },
   components: {

@@ -1,8 +1,15 @@
 <template>
 <div>
   <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
-  <el-calendar v-model="value" class="calendar">
-  </el-calendar>
+  <!-- 解决input组件保持当前状态，当国际化时出现bug 测试界面-->
+  <el-form>
+    <el-form-item :label="$t('message.option.label')">
+      <el-select v-model="form.region" :placeholder="$t('message.option.placeholder')">
+        <el-option :label="$t('message.option.label1')"></el-option>
+        <el-option :label="$t('message.option.label2')"></el-option>
+      </el-select>
+    </el-form-item>
+  </el-form>
 </div>
 </template>
 
@@ -11,7 +18,9 @@ import breadcrumb from '@/components/breadCrumb'
 export default {
   data() {
     return {
-      value: new Date(),
+      form: {
+        region: '',
+      }
     }
   },
   computed: {
@@ -33,8 +42,5 @@ export default {
 </script>
 
 <style>
-.calendar {
-  width: 50%;
-  height: auto;
-}
+
 </style>
