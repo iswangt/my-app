@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="login">
-    <el-button type="primary" plain @click="submit">进入首页</el-button>
+    <el-button type="primary" plain @click="submit">某某系统首页，点击登录跳转</el-button>
   </div>
 </div>
 </template>

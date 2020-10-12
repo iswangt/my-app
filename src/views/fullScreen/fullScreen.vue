@@ -1,14 +1,30 @@
 <template>
 <div>
+  <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
   <div class="a" @click="toggleFullScreen()">点击显示方式</div>
   <div class="b">文字显示</div>
 </div>
 </template>
 
 <script>
+import breadcrumb from '@/components/breadCrumb'
 export default {
+  data() {
+    return {
+      breadcrumb: {
+        data: [{
+            label: `message.login`,
+            path: '/'
+          },
+          {
+            label: `message.menu.${this.$route.meta.localekey}`
+          }
+        ]
+      },
+    }
+  },
   methods: {
-    toggleFullScreen() {
+    toggleFullScreen() { // 点击全屏方法
 
       // 检测全屏属性，无返回null 
       let isFull = document.fullscreenElement || document.msFullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement
@@ -47,6 +63,9 @@ export default {
         }
       }
     }
+  },
+  components: {
+    breadcrumb
   }
 }
 </script>

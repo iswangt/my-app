@@ -2,6 +2,7 @@ import enLocale from 'element-ui/lib/locale/lang/en' // element ui 英文
 
 const en = {
   message: {
+    'login': 'login',
     'main': 'hello,world',
     'footer': 'footer',
     'look': 'show',

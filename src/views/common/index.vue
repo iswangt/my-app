@@ -4,7 +4,6 @@
   <el-container class="inner-container">
     <Header />
     <el-main class="main">
-      <h1>{{$t('message.main')}}</h1>
       <router-view />
     </el-main>
     <el-footer class="footer">{{$t('message.footer')}}</el-footer>
@@ -40,11 +39,6 @@ export default {
 
     .main {
       background: gray;
-
-      h1 {
-        height: 200px;
-        border: 1px solid red;
-      }
     }
 
     .footer {
