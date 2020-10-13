@@ -2,7 +2,7 @@ import enLocale from 'element-ui/lib/locale/lang/en' // element ui 英文
 
 const en = {
   message: {
-    'login': 'login',
+    'index': 'index',
     'footer': 'footer',
     'look': 'show',
     'add': 'add',
@@ -14,6 +14,14 @@ const en = {
       fullScreen: 'screen',
       table: 'table'
     },
+    bread:{
+      index: 'index',
+      calendar: 'calendar',
+      echart: 'echart',
+      fullScreen: 'screen',
+      table: 'table',
+      detail: 'detail'
+    }
   },
   ...enLocale // element ui 英文
 }

@@ -20,6 +20,7 @@ export default {
     }
   },
   created() {
+    // 路由localekey = 菜单国际化
     // console.log(this.$route.path)
     this.defaultAct = this.$route.path
     // console.log(this.$router.options.routes)
@@ -28,15 +29,8 @@ export default {
         this.menuItem = [...this.$router.options.routes[i].children]
       }
     }
-    console.log(this.menuItem)
+    // console.log(this.menuItem)
   },
-  methods: {
-    eCharts() {
-      this.$router.push({
-        path: '/index/ECharts'
-      })
-    }
-  }
 }
 </script>
 

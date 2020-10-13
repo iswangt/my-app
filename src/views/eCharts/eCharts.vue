@@ -85,14 +85,23 @@ export default {
   },
   computed: {
     breadcrumb() {
-      return [{
-          label: this.$t(`message.login`),
-          path: '/'
-        },
-        {
-          label: this.$t(`message.menu.${this.$route.meta.localekey}`)
+      let arr = [] // 面包屑数组
+      let a = this.$route.matched
+      let newArr = a[a.length - 1].path.split('/')
+      newArr.shift()
+      for (let i = 0; i < newArr.length; i++) {
+        arr.push({
+          label: this.$t(`message.bread.${newArr[i]}`),
+          path: '/' + newArr[i]
+        })
+      }
+      for (let i = arr.length - 1; i > 0; i--) {
+        for (let j = i - 1; j >= 0; j--) {
+          arr[i].path = arr[j].path + arr[i].path
         }
-      ]
+      }
+      console.log(arr)
+      return arr
     }
   },
   components: {

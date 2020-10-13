@@ -13,7 +13,7 @@ export default {
         path: '/index/table'
       })
     }
-  }
+  },
 }
 </script>
 

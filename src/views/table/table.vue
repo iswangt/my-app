@@ -1,6 +1,5 @@
 <template>
 <div>
-  <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
   <!-- 解决input组件保持当前状态，当国际化时出现bug 测试界面-->
   <el-table style="width: 100%" :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)">
     <el-table-column prop="id" label="ID" width="180">
@@ -16,12 +15,12 @@
 
   <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page="currentPage" :page-sizes="[1, 2, 4]" :page-size="pagesize" layout="total, sizes, prev, pager, next, jumper" :total="tableData.length">
   </el-pagination>
+
 </div>
 </template>
 
 <script>
 import userArr from '@/assets/table'
-import breadcrumb from '@/components/breadCrumb'
 export default {
   data() {
     return {
@@ -42,24 +41,9 @@ export default {
     },
     to() {
       this.$router.push({
-        path: '/index/table/show'
+        path: '/index/table/detail',
       })
     }
-  },
-  computed: {
-    breadcrumb() {
-      return [{
-          label: this.$t(`message.login`),
-          path: '/'
-        },
-        {
-          label: this.$t(`message.menu.${this.$route.meta.localekey}`)
-        }
-      ]
-    }
-  },
-  components: {
-    breadcrumb
   }
 }
 </script>

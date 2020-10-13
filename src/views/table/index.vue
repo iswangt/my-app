@@ -1,20 +1,15 @@
 <template>
 <div>
   <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
-  <el-calendar v-model="value" class="calendar">
-  </el-calendar>
+  <router-view />
 </div>
 </template>
 
 <script>
 import breadcrumb from '@/components/breadCrumb'
 export default {
-  data() {
-    return {
-      value: new Date(),
-    }
-  },
   computed: {
+    // 路由path路径 = 面包屑国际化
     breadcrumb() {
       let arr = [] // 面包屑数组
       let a = this.$route.matched
@@ -42,8 +37,5 @@ export default {
 </script>
 
 <style>
-.calendar {
-  width: 50%;
-  height: auto;
-}
+
 </style>

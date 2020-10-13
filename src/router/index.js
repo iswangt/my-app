@@ -33,8 +33,8 @@ export default new Router({
           },
         },
         {
-          path: '/index/ECharts',
-          name: 'ECharts',
+          path: '/index/echart',
+          name: 'echart',
           component: resolve => require(['@/views/eCharts/eCharts'], resolve),
           meta: {
             child: false,
@@ -56,24 +56,37 @@ export default new Router({
         },
         {
           path: '/index/table', // 测试用例 组件保持当前状态 国际化时 测试用例
-          name: 'table',
-          component: resolve => require(['@/views/table/table'], resolve),
+          redirect: '/index/table',
+          component: resolve => require(['@/views/table/index'], resolve),
           meta: {
-            child: false,
+            child: true,
             hidden: false,
             icon: 'el-icon-tickets',
             localekey: 'table',
-            keepAlive: true
-          }
-        },
-        {
-          path: '/index/table/show',
-          name: 'show',
-          component: resolve => require(['@/views/table/show'], resolve),
-          meta: {
-            child: false,
-            hidden: true
-          }
+            keepAlive: true,
+          },
+          children:[
+            {
+              path: '/index/table', // 测试用例 组件保持当前状态 国际化时 测试用例
+              name: 'table',
+              component: resolve => require(['@/views/table/table'], resolve),
+              meta: {
+                child: false,
+                localekey: 'table',
+                keepAlive: true,
+              },
+            },
+            {
+              path: '/index/table/detail',
+              name: 'detail',
+              component: resolve => require(['@/views/table/detail'], resolve),
+              meta: {
+                child: false,
+                hidden: true,
+                localekey: 'detail',
+              }
+            }
+          ]
         }
       ]
     }
