@@ -12,15 +12,8 @@ const cn = {
       calendar: '日历',
       echart: '图表',
       fullScreen: '屏幕',
-      option: '选择 '
+      table: '表格 '
     },
-    // 选择项
-    option:{
-      label: '活动区域',
-      placeholder: '请选择活动区域',
-      label1: '区域一',
-      label2: '区域二'
-    }
   },
   ...zhLocale // element ui 中文
 }

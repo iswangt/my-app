@@ -19,7 +19,6 @@ export default new Router({
       meta: {
         KEY: 'aside',
         child: true,
-        hidden: false
       },
       children: [
         {
@@ -29,7 +28,7 @@ export default new Router({
           meta: {
             child: false,
             hidden: false,
-            icon: 'el-icon-s-grid',
+            icon: 'el-icon-date',
             localekey: 'calendar'
           },
         },
@@ -56,14 +55,24 @@ export default new Router({
           }
         },
         {
-          path: '/index/option', // 测试用例 组件保持当前状态 国际化时 测试用例
-          name: 'option',
-          component: resolve => require(['@/views/option/option'], resolve),
+          path: '/index/table', // 测试用例 组件保持当前状态 国际化时 测试用例
+          name: 'table',
+          component: resolve => require(['@/views/table/table'], resolve),
           meta: {
             child: false,
             hidden: false,
-            icon: 'el-icon-edit',
-            localekey: 'option',
+            icon: 'el-icon-tickets',
+            localekey: 'table',
+            keepAlive: true
+          }
+        },
+        {
+          path: '/index/table/show',
+          name: 'show',
+          component: resolve => require(['@/views/table/show'], resolve),
+          meta: {
+            child: false,
+            hidden: true
           }
         }
       ]

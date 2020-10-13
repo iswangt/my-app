@@ -12,15 +12,8 @@ const en = {
       calendar: 'calendar',
       echart: 'echart',
       fullScreen: 'screen',
-      option: 'option'
+      table: 'table'
     },
-    // 选择项
-    option:{
-      label: 'active',
-      placeholder: 'please active',
-      label1: 'active1',
-      label2: 'active2'
-    }
   },
   ...enLocale // element ui 英文
 }

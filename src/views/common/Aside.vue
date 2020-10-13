@@ -2,7 +2,7 @@
 <el-aside class="aside">
   <el-menu :default-active="defaultAct" router unique-opened>
     <template v-for="(item,index) in menuItem">
-      <el-menu-item :key="index" :index="item.path">
+      <el-menu-item :key="index" :index="item.path" v-if="!item.meta.hidden">
         <i :class="item.meta.icon"></i>
         <span slot="title">{{$t(`message.menu.${item.meta.localekey}`)}}</span>
       </el-menu-item>
