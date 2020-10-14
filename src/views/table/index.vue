@@ -12,9 +12,10 @@ export default {
     // 路由path路径 = 面包屑国际化
     breadcrumb() {
       let arr = [] // 面包屑数组
-      let a = this.$route.matched
-      let newArr = a[a.length - 1].path.split('/')
-      newArr.shift()
+      let a = this.$route.path // 当前路由路径
+      let newArr = a.split('/')
+      newArr.shift() //  删除数组第一个空字符串
+      // newArr = ["index", "table", "detail"]
       for (let i = 0; i < newArr.length; i++) {
         arr.push({
           label: this.$t(`message.bread.${newArr[i]}`),
@@ -26,7 +27,6 @@ export default {
           arr[i].path = arr[j].path + arr[i].path
         }
       }
-      console.log(arr)
       return arr
     }
   },

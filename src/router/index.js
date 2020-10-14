@@ -37,11 +37,35 @@ export default new Router({
           name: 'echart',
           component: resolve => require(['@/views/eCharts/eCharts'], resolve),
           meta: {
-            child: false,
+            child: true,
             hidden: false,
             icon: 'el-icon-office-building',
             localekey: 'echart'
           },
+          children: [
+            {
+              path: '/index/echart1',
+              name: 'echart1',
+              component: resolve => require(['@/views/eCharts/eCharts1'], resolve),
+              meta: {
+                child: false,
+                hidden: false,
+                icon: 'el-icon-office-building',
+                localekey: 'echart1'
+              },
+            },
+            {
+              path: '/index/echart2',
+              name: 'echart2',
+              component: resolve => require(['@/views/eCharts/eCharts2'], resolve),
+              meta: {
+                child: false,
+                hidden: false,
+                icon: 'el-icon-office-building',
+                localekey: 'echart2'
+              },
+            }
+          ]
         },
         {
           path: '/index/fullScreen', // 测试用例scss
@@ -59,7 +83,7 @@ export default new Router({
           redirect: '/index/table',
           component: resolve => require(['@/views/table/index'], resolve),
           meta: {
-            child: true,
+            child: false,
             hidden: false,
             icon: 'el-icon-tickets',
             localekey: 'table',
@@ -72,6 +96,7 @@ export default new Router({
               component: resolve => require(['@/views/table/table'], resolve),
               meta: {
                 child: false,
+                hidden: false,
                 localekey: 'table',
                 keepAlive: true,
               },

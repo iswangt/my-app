@@ -10,7 +10,11 @@ const en = {
      // 导航 国际化
     menu: {
       calendar: 'calendar',
-      echart: 'echart',
+      echart: {
+        echart: 'echart',
+        echart1: 'echart1',
+        echart2: 'echart2'
+      },
       fullScreen: 'screen',
       table: 'table'
     },
@@ -20,7 +24,9 @@ const en = {
       echart: 'echart',
       fullScreen: 'screen',
       table: 'table',
-      detail: 'detail'
+      detail: 'detail',
+      echart1: 'echart1',
+      echart2: 'echart2'
     }
   },
   ...enLocale // element ui 英文
