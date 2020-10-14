@@ -1,6 +1,6 @@
 <template>
 <el-aside class="aside">
-  <el-menu :default-active="defaultAct" router unique-opened>
+  <el-menu :default-active="defaultAct" router  :collapse="collapse" >
     <span v-for="(item,index) in menuItem" :key="index">
       <!-- 有子路由目录 -->
       <el-submenu v-if="!item.meta.hidden &&item.meta.child">
@@ -26,8 +26,9 @@
 export default {
   data() {
     return {
-      defaultAct: '',
-      menuItem: []
+      isCollapse: false,
+      defaultAct: '', // 当前路由路径
+      menuItem: [] // 导航信息
     }
   },
   created() {
@@ -46,5 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.aside {}
+.aside {
+  margin-top: 60px;
+}
 </style>

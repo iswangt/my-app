@@ -7,18 +7,14 @@ const en = {
     'look': 'show',
     'add': 'add',
     'del': 'delete',
-     // 导航 国际化
-    menu: {
-      calendar: 'calendar',
-      echart: {
-        echart: 'echart',
-        echart1: 'echart1',
-        echart2: 'echart2'
-      },
-      fullScreen: 'screen',
-      table: 'table'
+    'loading': 'loading',
+    'language': {
+      loading: 'loading',
+      cn: 'Chinese',
+      en: 'English'
     },
-    bread:{
+    // 面包屑 和 导航
+    bread: {
       index: 'index',
       calendar: 'calendar',
       echart: 'echart',

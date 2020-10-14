@@ -7,12 +7,14 @@ const cn = {
     'look': '查看',
     'add': '新增',
     'del': '删除',
-    table:{
-      detail: '详情',
-      test: '测试'
+    'loading': '正在加载...',
+    'language': {
+      loading: '语言切换中...',
+      cn: '中文',
+      en: '英文'
     },
     // 面包屑 和 导航
-    bread:{
+    bread: {
       index: '首页',
       calendar: '日历',
       echart: '图表',
