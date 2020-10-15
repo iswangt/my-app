@@ -59,6 +59,7 @@ export default {
   line-height: 60px;
   text-align: right;
   font-size: 16px;
-  margin-right: 20px;
+  padding-right: 20px;
+  background: #45aadd;
 }
 </style>
