@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <el-footer class="foot">
     {{$t('message.footer')}}
-  </div>
+  </el-footer>
 </template>
 
 <script>
@@ -10,5 +10,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
+.foot {
+  text-align: center;
+  line-height: 60px;
+  font-size: 16px;
+}
 </style>

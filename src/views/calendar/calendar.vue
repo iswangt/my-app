@@ -1,21 +1,22 @@
 <template>
-<div>
-  <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
-  <el-calendar v-model="value" class="calendar">
-  </el-calendar>
-</div>
+  <div>
+    <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
+    <el-calendar v-model="value"
+                 class="calendar">
+    </el-calendar>
+  </div>
 </template>
 
 <script>
 import breadcrumb from '@/components/breadCrumb'
 export default {
-  data() {
+  data () {
     return {
       value: new Date(),
     }
   },
   computed: {
-    breadcrumb() {
+    breadcrumb () {
       let arr = [] // 面包屑数组
       let a = this.$route.matched
       let newArr = a[a.length - 1].path.split('/')

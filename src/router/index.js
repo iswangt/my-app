@@ -89,7 +89,7 @@ export default new Router({
             localekey: 'table',
             keepAlive: true,
           },
-          children:[
+          children: [
             {
               path: '/index/table', // 测试用例 组件保持当前状态 国际化时 测试用例
               name: 'table',

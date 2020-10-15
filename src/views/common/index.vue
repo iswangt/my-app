@@ -63,16 +63,8 @@ export default {
   height: 100%;
 
   .inner-container {
-    .header {
-      background: #ffffff;
-    }
-
     .main {
       background: gray;
-    }
-
-    .footer {
-      background: #ffffff;
     }
   }
 }
