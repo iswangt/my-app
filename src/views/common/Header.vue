@@ -34,7 +34,7 @@ export default {
         value: 'en',
         label: '英文'
       }],
-      value: 'cn'
+      value: window.localStorage.getItem('lang') || 'cn'
     }
   },
   methods: {
@@ -47,6 +47,7 @@ export default {
       });
       setTimeout(() => {
         this.$i18n.locale = this.value // 切换语言
+        window.localStorage.setItem('lang', this.value)
         loading.close();
       }, 1000);
     }

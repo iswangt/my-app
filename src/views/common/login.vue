@@ -1,15 +1,17 @@
 <template>
-<div>
-  <div class="login">
-    <el-button type="primary" plain @click="submit">某某系统首页，点击登录跳转</el-button>
+  <div>
+    <div class="login">
+      <el-button type="primary"
+                 plain
+                 @click="submit">{{$t('message.login')}}</el-button>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
   methods: {
-    submit() {
+    submit () {
       this.$router.push({
         path: '/index'
       })

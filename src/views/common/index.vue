@@ -4,7 +4,8 @@
     <Header />
     <el-container>
       <Aside />
-      <el-container class="inner-container">
+      <el-container class="inner-container"
+                    direction="vertical">
         <el-main class="main"
                  v-loading="loading"
                  :element-loading-text="$t('message.loading')"
@@ -16,7 +17,7 @@
           </keep-alive>
           <router-view v-if="!$route.meta.keepAlive" />
         </el-main>
-        <el-footer class="footer">{{$t('message.footer')}}</el-footer>
+        <Footer />
       </el-container>
     </el-container>
   </el-container>
@@ -25,6 +26,7 @@
 <script>
 import Aside from './Aside'
 import Header from './Header'
+import Footer from './Footer'
 export default {
   data () {
     return {
@@ -33,7 +35,8 @@ export default {
   },
   components: {
     Aside,
-    Header
+    Header,
+    Footer
   },
   watch: {
     '$route': {
