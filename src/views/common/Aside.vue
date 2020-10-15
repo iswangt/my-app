@@ -47,12 +47,13 @@ export default {
         this.menuItem = [...this.$router.options.routes[i].children]
       }
     }
-    console.log(this.menuItem)
+    // console.log(this.menuItem)
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .aside {
+  width: 250px !important;
 }
 </style>

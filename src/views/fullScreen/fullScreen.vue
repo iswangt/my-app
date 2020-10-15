@@ -1,21 +1,22 @@
 <template>
-<div>
-  <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
-  <div class="a" @click="toggleFullScreen()">点击显示方式</div>
-  <div class="b">文字显示</div>
-</div>
+  <div>
+    <breadcrumb :breadcrumb='breadcrumb'></breadcrumb>
+    <div class="a"
+         @click="toggleFullScreen()">点击显示方式</div>
+    <div class="b">文字显示</div>
+  </div>
 </template>
 
 <script>
 import breadcrumb from '@/components/breadCrumb'
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
   methods: {
-    toggleFullScreen() { // 点击全屏方法
+    toggleFullScreen () { // 点击全屏方法
 
       // 检测全屏属性，无返回null 
       let isFull = document.fullscreenElement || document.msFullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement
@@ -56,7 +57,7 @@ export default {
     }
   },
   computed: {
-    breadcrumb() {
+    breadcrumb () {
       let arr = [] // 面包屑数组
       let a = this.$route.matched
       let newArr = a[a.length - 1].path.split('/')
@@ -83,7 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/style/index.scss';
+@import "@/style/index.scss";
 
 .a {
   width: $numMin; // 变量 100px
@@ -100,5 +101,6 @@ export default {
   background: $colorGreen;
   @extend %font; // 继承
   @include border(10px, solid, yellow) // 混合
+;
 }
 </style>

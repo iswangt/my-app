@@ -1,10 +1,10 @@
 <template>
-  <el-container class="container"
+  <el-container class="containerA"
                 direction="vertical">
     <Header />
-    <el-container>
+    <el-container class="containerB">
       <Aside />
-      <el-container class="inner-container"
+      <el-container class="containerC"
                     direction="vertical">
         <el-main class="main"
                  v-loading="loading"
@@ -59,12 +59,16 @@ export default {
   margin: 0px;
 }
 
-.container {
+.containerA {
   height: 100%;
 
-  .inner-container {
-    .main {
-      background: gray;
+  .containerB {
+    height: calc(100% - 60px);
+    .containerC {
+      .main {
+        background: gray;
+        height: calc(100% - 120px);
+      }
     }
   }
 }

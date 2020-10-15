@@ -34,7 +34,7 @@ export default {
         value: 'en',
         label: '英文'
       }],
-      value: window.localStorage.getItem('lang') || 'cn'
+      value: window.localStorage.getItem('lang') || window.config.conmmonLang
     }
   },
   methods: {

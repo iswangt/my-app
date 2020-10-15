@@ -2,7 +2,7 @@ import zhLocale from 'element-ui/lib/locale/lang/zh-CN' // element ui 中文
 
 const cn = {
   message: {
-    'login': '登陆跳转...',
+    'login': '登陆...',
     'index': '首页',
     'footer': '尾部',
     'look': '查看',

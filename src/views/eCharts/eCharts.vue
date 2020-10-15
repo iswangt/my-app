@@ -1,20 +1,20 @@
 <template>
-<div>
-  <breadCrumb :breadcrumb='breadcrumb'></breadCrumb>
-  <router-view />
-</div>
+  <div>
+    <breadCrumb :breadcrumb='breadcrumb'></breadCrumb>
+    <router-view />
+  </div>
 </template>
 
 <script>
 import breadCrumb from '@/components/breadCrumb'
 export default {
-  data() {
+  data () {
     return {
 
     }
   },
   computed: {
-    breadcrumb() {
+    breadcrumb () {
       let arr = [] // 面包屑数组
       let a = this.$route.matched
       let newArr = a[a.length - 1].path.split('/')
@@ -42,7 +42,7 @@ export default {
 
 <style>
 .tu {
-  padding-top: 100px;
+  padding-top: 30px;
   width: 100%;
 }
 </style>
