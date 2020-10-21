@@ -24,6 +24,15 @@ const en = {
       detail: 'detail',
       echart1: 'echart1',
       echart2: 'echart2'
+    },
+    views: {
+      calender: {
+        form: {
+          label: 'active time',
+          startTime: 'start time',
+          endTime: 'end time'
+        }
+      }
     }
   },
   ...enLocale // element ui 英文

@@ -27,14 +27,14 @@ export default {
       console.log(d)
       console.log(dd)
 
-      let headerDom = document.getElementsByClassName('header')[0]
+      let header = document.getElementsByClassName('header')[0]
       let aside = document.getElementsByClassName('aside')[0]
-      let footer = document.getElementsByClassName('footer')[0]
+      let foot = document.getElementsByClassName('foot')[0]
 
       if (!isFull) {
-        headerDom.style.display = 'none'
+        header.style.display = 'none'
         aside.style.display = 'none'
-        footer.style.display = 'none'
+        foot.style.display = 'none'
         if (dd.requestFullscreen) {
           dd.requestFullscreen();
         } else if (dd.mozRequestFullScreen) {
@@ -43,9 +43,9 @@ export default {
           dd.webkitRequestFullscreen();
         }
       } else {
-        headerDom.style.display = ''
+        header.style.display = ''
         aside.style.display = ''
-        footer.style.display = ''
+        foot.style.display = ''
         if (d.cancelFullScreen) {
           d.cancelFullScreen();
         } else if (d.mozCancelFullScreen) {
@@ -100,7 +100,6 @@ export default {
   height: $numMax;
   background: $colorGreen;
   @extend %font; // 继承
-  @include border(10px, solid, yellow) // 混合
-;
+  @include border(10px, solid, yellow); // 混合
 }
 </style>

@@ -24,6 +24,15 @@ const cn = {
       detail: '详情',
       echart1: '线性',
       echart2: '扇形'
+    },
+    views: {
+      calender: {
+        form: {
+          label: '活动时间',
+          startTime: '开始时间',
+          endTime: '结束时间'
+        }
+      }
     }
   },
   ...zhLocale // element ui 中文
